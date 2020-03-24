@@ -1,8 +1,16 @@
-@import "~antd/dist/antd.css";
+@import '~antd/dist/antd.css';
 
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+input.ant-input {
+  height: 40px;
+}
+
+.ant-row.ant-form-item {
+  margin-bottom: 10px;
 }

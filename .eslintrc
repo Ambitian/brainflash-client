@@ -12,20 +12,10 @@
     "prettier/prettier": "error",
     "no-console": "error",
 
-    "react/jsx-props-no-spreading": "error",
+    "react/jsx-props-no-spreading": "off",
     "react-hooks/exhaustive-deps": "warn",
     "import/no-default-export": "off",
-    "import/order": [
-      "error",
-      {
-        "groups": [
-          ["external", "builtin"],
-          ["parent", "internal"],
-          ["index", "sibling"]
-        ],
-        "newlines-between": "always"
-      }
-    ],
+    "import/order": "off",
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-empty-function": "off"

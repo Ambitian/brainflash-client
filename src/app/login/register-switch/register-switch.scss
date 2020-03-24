@@ -1,0 +1,30 @@
+.register-switch {
+  display: flex;
+  align-items: center;
+
+  button.ant-btn {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  button.ant-btn:first-child {
+    margin-right: 20px;
+  }
+
+  & .ant-btn.register-switch__option.register-switch__option--active {
+    color: #3d3b3c;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__option {
+    color: #b5b3b0;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}

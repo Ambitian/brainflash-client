@@ -1,5 +1,7 @@
 # 🧠 Brainflash - Client
 
+![](https://github.com/Miczeq22/brainflash-client/workflows/Units/badge.svg)
+
 ## 📖Table of Contents
 
 - 👀 [What's inside](#whats-inside)

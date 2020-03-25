@@ -1,0 +1,83 @@
+.login-page {
+  display: flex;
+  height: 100vh;
+
+  & > .form-container {
+    height: 100%;
+    overflow-y: scroll;
+    min-width: 550px;
+    border-right: 1px solid #b5b3b0;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
+    & .logo {
+      display: flex;
+      position: relative;
+      align-items: center;
+      flex: 1;
+      &__image {
+        width: 50px;
+      }
+
+      &__title {
+        font-size: 30px;
+        position: absolute;
+        left: 60px;
+        font-weight: 700;
+      }
+    }
+
+    & .register-switch {
+      margin: 20px 0;
+    }
+
+    .login-form,
+    .register-form {
+      flex: 3;
+    }
+
+    .register-button,
+    .login-button {
+      height: 40px;
+      padding: 0 50px;
+      margin-top: 15px;
+    }
+
+    .feature-list {
+      flex: 1;
+      margin-top: 20px;
+    }
+  }
+
+  & .page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    & .content-features {
+      display: flex;
+      width: 800px;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    &__img {
+      width: 800px;
+    }
+
+    &__text {
+      font-size: 18px;
+      font-weight: 500;
+      width: 400px;
+      text-align: center;
+
+      &--highlight {
+        color: #5f81f4;
+      }
+    }
+  }
+}

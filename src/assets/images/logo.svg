@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="290" height="321" viewBox="0 0 290 321">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#5f81f4"/>
+      <stop offset="1" stop-color="#5f81f3"/>
+      <stop offset="1" stop-color="#30417a"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_60" data-name="Rectangle 60" width="77" height="77" transform="translate(326 154)" fill="#fdce30" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_4" data-name="Group 4" transform="translate(-138 -106)">
+    <rect id="Rectangle_59" data-name="Rectangle 59" width="290" height="290" transform="translate(138 121)" fill="url(#linear-gradient)"/>
+    <text id="B" transform="translate(219 325)" fill="#fff" font-size="209" font-family="BalooThambi-Regular, Baloo Thambi"><tspan x="0" y="0">B</tspan></text>
+    <g id="Mask_Group_40" data-name="Mask Group 40" transform="translate(-16 7)" clip-path="url(#clip-path)">
+      <g id="shine" transform="translate(326 154)">
+        <path id="Path_12" data-name="Path 12" d="M74.744,53.189a17.067,17.067,0,0,1-12.106-4.973A16.822,16.822,0,0,1,57.631,36.2a2.256,2.256,0,0,0-4.512,0,16.822,16.822,0,0,1-5.007,12.021,17.067,17.067,0,0,1-12.106,4.973,2.256,2.256,0,0,0,0,4.512A17.1,17.1,0,0,1,53.12,74.744a2.256,2.256,0,0,0,4.512,0A17.1,17.1,0,0,1,74.744,57.7a2.256,2.256,0,0,0,0-4.512Zm0,0" fill="#fdce30"/>
+        <path id="Path_13" data-name="Path 13" d="M30.865,35.55A12.019,12.019,0,0,1,18.816,23.59a2.256,2.256,0,1,0-4.512,0A12.019,12.019,0,0,1,2.256,35.55a2.256,2.256,0,0,0,0,4.512,12.037,12.037,0,0,1,12.049,12,2.256,2.256,0,1,0,4.512,0,12.037,12.037,0,0,1,12.049-12,2.256,2.256,0,1,0,0-4.512Zm0,0" fill="#fdce30"/>
+        <path id="Path_14" data-name="Path 14" d="M34.535,15.589A8.838,8.838,0,0,1,43.4,24.382a2.256,2.256,0,1,0,4.512,0,8.851,8.851,0,0,1,8.861-8.821,2.256,2.256,0,0,0,0-4.512,8.838,8.838,0,0,1-8.861-8.793,2.256,2.256,0,0,0-4.512,0,8.851,8.851,0,0,1-8.861,8.821,2.256,2.256,0,0,0,0,4.512Zm0,0" fill="#fdce30"/>
+      </g>
+    </g>
+  </g>
+</svg>

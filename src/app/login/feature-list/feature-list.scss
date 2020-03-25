@@ -1,0 +1,27 @@
+.feature-list {
+  list-style: none;
+
+  padding: 0;
+  flex: 1;
+
+  & .feature {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    &__text {
+      margin-left: 10px;
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+
+  .feature:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ApolloProvider } from 'react-apollo';
 import * as serviceWorker from './serviceWorker';
 import App from './app/app';
-import { client } from './graphql/apollo-client';
 
 import './index.scss';
+import { AppProvider } from './providers/app.provider';
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
+  <AppProvider>
     <App />
-  </ApolloProvider>,
+  </AppProvider>,
   document.getElementById('root'),
 );
 

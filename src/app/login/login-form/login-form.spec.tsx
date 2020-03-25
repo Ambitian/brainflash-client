@@ -5,6 +5,7 @@ import { LoginForm } from './login-form';
 import { Input, Button, Alert } from 'antd';
 import { act } from 'react-dom/test-utils';
 import { LOGIN_MUTATION } from '../../../graphql/mutations/login.mutation';
+import { AuthStateProvider } from '../../../providers/auth.provider';
 
 const mocks: MockedResponse[] = [
   {
@@ -67,9 +68,11 @@ const mocks: MockedResponse[] = [
 
 const wrapComponent = () => {
   return (
-    <MockedProvider mocks={mocks} addTypename={false}>
-      <LoginForm />
-    </MockedProvider>
+    <AuthStateProvider>
+      <MockedProvider mocks={mocks} addTypename={false}>
+        <LoginForm />
+      </MockedProvider>
+    </AuthStateProvider>
   );
 };
 

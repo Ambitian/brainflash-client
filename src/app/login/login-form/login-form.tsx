@@ -3,6 +3,13 @@ import React from 'react';
 import { Form, Input, Icon, Checkbox, Button, Alert } from 'antd';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_MUTATION } from '../../../graphql/mutations/login.mutation';
+import {
+  setTokens,
+  setAuthorized,
+  startAuthorizing,
+  setUnauthorized,
+} from '../../../context/auth/auth.action-creators';
+import { useAuthState } from '../../../hooks/use-auth-state/use-auth-state.hook';
 
 export interface LoginData {
   email: string;
@@ -21,22 +28,32 @@ export const LoginForm = () => {
   });
   const [login, { loading }] = useMutation(LOGIN_MUTATION);
   const [errorType, setErrorType] = React.useState<LoginErrorType | null>(null);
+  const { dispatch } = useAuthState();
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     setErrorType(null);
+    dispatch(startAuthorizing());
 
     try {
-      await login({
+      const {
+        data: {
+          login: { jwt },
+        },
+      } = await login({
         variables: { input: data },
       });
+
+      dispatch(setTokens(jwt, ''));
+      dispatch(setAuthorized());
     } catch ({ graphQLErrors: [error] }) {
       setErrorType(
         error.message === 'Unauthorized.'
           ? LoginErrorType.UNAUTHORIZED
           : LoginErrorType.VERIFY_EMAIL,
       );
+      dispatch(setUnauthorized());
     }
   };
 

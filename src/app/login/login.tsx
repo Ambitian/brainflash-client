@@ -10,7 +10,7 @@ import { FeatureList } from './feature-list/feature-list';
 import { RegisterForm } from './register-form/register-form';
 
 export const Login = () => {
-  const [currentState, setCurrentState] = React.useState(SwitchState.REGISTER);
+  const [currentState, setCurrentState] = React.useState(SwitchState.LOGIN);
 
   return (
     <div className="login-page">

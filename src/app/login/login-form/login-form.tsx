@@ -4,8 +4,6 @@ import { Form, Input, Icon, Checkbox, Button, Alert } from 'antd';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_MUTATION } from '../../../graphql/mutations/login.mutation';
 
-import './login-form.scss';
-
 export interface LoginData {
   email: string;
   password: string;
@@ -90,14 +88,17 @@ export const LoginForm = () => {
       <Form.Item>
         <Checkbox>Remember me</Checkbox>
       </Form.Item>
-      <Button
-        loading={loading}
-        type="primary"
-        htmlType="submit"
-        className="login-button"
-      >
-        Log in
-      </Button>
+      <Form.Item>
+        <Button
+          loading={loading}
+          type="primary"
+          htmlType="submit"
+          className="login-button"
+          disabled={!data.email.trim() || !data.password}
+        >
+          Log in
+        </Button>
+      </Form.Item>
     </Form>
   );
 };

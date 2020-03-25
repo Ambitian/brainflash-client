@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Login } from './login/login';
+import { AppRoutes } from '../routing/app-routes';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Login />
+        <AppRoutes />
       </div>
     );
   }

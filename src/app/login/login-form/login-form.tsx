@@ -97,6 +97,7 @@ export const LoginForm = () => {
       <Form.Item label="Password">
         <Input.Password
           name="password"
+          placeholder="Please provide password"
           onChange={onChange}
           value={data.password}
         />

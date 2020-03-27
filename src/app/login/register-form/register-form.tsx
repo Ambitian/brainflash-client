@@ -61,6 +61,12 @@ export const RegisterForm = () => {
         },
       });
       setRegistrationSuccess(true);
+      setData({
+        email: '',
+        name: '',
+        password: '',
+        retypePassword: '',
+      });
     } catch ({ graphQLErrors: [error] }) {
       setErrorMessage(error.message);
       if (error.details) {

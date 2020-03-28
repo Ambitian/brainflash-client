@@ -1,0 +1,16 @@
+.topbar {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .panel-container {
+    display: flex;
+    align-items: center;
+
+    & .notification-bell {
+      margin-right: 10px;
+    }
+  }
+}

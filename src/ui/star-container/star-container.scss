@@ -1,0 +1,16 @@
+.star-container {
+  display: flex;
+
+  & > .star {
+    margin-left: 10px;
+    fill: #b5b3b0;
+
+    &--active {
+      fill: #fdce30;
+    }
+  }
+
+  & > .star:first-child {
+    margin-left: 0;
+  }
+}

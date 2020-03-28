@@ -1,0 +1,29 @@
+.ant-btn.create-deck-btn {
+  background-color: #5f81f4;
+  color: #ffffff;
+  height: 45px;
+  border-radius: 50px;
+  padding-right: 50px;
+  position: relative;
+  border: none;
+
+  .create-deck-btn__icon {
+    background-color: #829df5;
+    padding: 10px;
+    border-radius: 50%;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    right: 4px;
+    top: 4px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #6f92f5;
+    color: #fff;
+  }
+}

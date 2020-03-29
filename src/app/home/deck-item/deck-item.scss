@@ -1,0 +1,56 @@
+.deck-item {
+  display: flex;
+  height: 85px;
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid #f4f7fa;
+  border-radius: 20px;
+  cursor: pointer;
+
+  &:hover,
+  &--selected {
+    background-color: #ffffff;
+  }
+
+  & > .img-container {
+    background-color: rgba(95, 129, 244, 0.3);
+    min-width: 85px;
+    min-height: 85px;
+    max-width: 85px;
+    max-height: 85px;
+    border-radius: 20px;
+  }
+
+  & > .content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    overflow: hidden;
+
+    .content__title {
+      width: 100%;
+      font-weight: 700;
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .content__rating {
+      display: flex;
+      align-items: center;
+      font-size: 11px;
+
+      .rating-summary {
+        font-weight: 700;
+        margin: 0 10px;
+      }
+
+      .rating-count {
+        font-weight: 500;
+        color: #b5b3b0;
+      }
+    }
+  }
+}

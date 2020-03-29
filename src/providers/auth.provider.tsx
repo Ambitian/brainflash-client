@@ -23,11 +23,12 @@ export const AuthStateProvider = ({
   >(authReducer, authInitialState);
 
   React.useEffect(() => {
-    const token = authStorage.getAccessToken();
+    const accessToken = authStorage.getAccessToken();
+    const refreshToken = authStorage.getRefreshToken();
     dispatch(startAuthorizing());
 
-    if (token) {
-      dispatch(setTokens(token, ''));
+    if (accessToken && refreshToken) {
+      dispatch(setTokens(accessToken, refreshToken));
       dispatch(setAuthorized());
     } else {
       dispatch(setUnauthorized());
@@ -36,7 +37,8 @@ export const AuthStateProvider = ({
 
   React.useEffect(() => {
     authStorage.setAccessToken(state.accessToken);
-  }, [state.accessToken]);
+    authStorage.setRefreshToken(state.refreshToken);
+  }, [state.accessToken, state.refreshToken]);
 
   return (
     <AuthContext.Provider value={{ state, dispatch }}>

@@ -8,7 +8,8 @@ export interface LoginMutationPayload {
 export const LOGIN_MUTATION = gql`
   mutation($input: LoginInput!) {
     login(input: $input) {
-      jwt
+      accessToken
+      refreshToken
     }
   }
 `;

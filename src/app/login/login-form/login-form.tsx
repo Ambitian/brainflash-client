@@ -39,13 +39,13 @@ export const LoginForm = () => {
     try {
       const {
         data: {
-          login: { jwt },
+          login: { accessToken, refreshToken },
         },
       } = await login({
         variables: { input: data },
       });
 
-      dispatch(setTokens(jwt, ''));
+      dispatch(setTokens(accessToken, refreshToken));
       dispatch(setAuthorized());
     } catch ({ graphQLErrors: [error] }) {
       setErrorType(

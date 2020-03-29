@@ -1,0 +1,21 @@
+.no-deck-selected-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .info-text {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+    & > .highlight {
+      color: #5f81f4;
+    }
+  }
+
+  .select-deck-img {
+    width: 400px;
+  }
+}

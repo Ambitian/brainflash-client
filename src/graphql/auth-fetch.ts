@@ -7,7 +7,7 @@ const isErrorResponse = (json: any): boolean => {
 };
 
 const isNotAuthenticated = (json: any) => {
-  return isErrorResponse(json) && json.errors[0].message === 'Unauthorized.';
+  return isErrorResponse(json) && json.errors[0].path.includes('login');
 };
 
 const prepareResponse = (text: string, json: any) => ({
@@ -27,6 +27,7 @@ export const authFetch = async (
   }
 
   const response = await fetch(uri, options);
+
   const text = await response.text();
   const json = JSON.parse(text);
 
@@ -47,7 +48,7 @@ export const authFetch = async (
 
   if (isErrorResponse(refreshResponseJson)) {
     authStorage.setAccessToken(null);
-    return (undefined as unknown) as Response;
+    return prepareResponse(text, json) as Response;
   }
 
   authStorage.setAccessToken(refreshResponseJson.data.refreshToken.accessToken);

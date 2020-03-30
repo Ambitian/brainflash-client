@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Form, Input, Icon, Checkbox, Button, Alert } from 'antd';
+import { Form, Input, Icon, Checkbox, Button, Alert, message } from 'antd';
 import { useMutation } from '@apollo/react-hooks';
 import { LOGIN_MUTATION } from '../../../graphql/mutations/login.mutation';
 import {
@@ -47,12 +47,18 @@ export const LoginForm = () => {
 
       dispatch(setTokens(accessToken, refreshToken));
       dispatch(setAuthorized());
-    } catch ({ graphQLErrors: [error] }) {
-      setErrorType(
-        error.message === 'Unauthorized.'
-          ? LoginErrorType.UNAUTHORIZED
-          : LoginErrorType.VERIFY_EMAIL,
-      );
+    } catch (error) {
+      const { graphQLErrors, message: errorMessage } = error;
+
+      if (graphQLErrors.length) {
+        setErrorType(
+          graphQLErrors[0].message === 'Unauthorized.'
+            ? LoginErrorType.UNAUTHORIZED
+            : LoginErrorType.VERIFY_EMAIL,
+        );
+      } else {
+        message.error(errorMessage);
+      }
       dispatch(setUnauthorized());
     }
   };

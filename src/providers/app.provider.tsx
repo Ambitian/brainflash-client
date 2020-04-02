@@ -5,9 +5,9 @@ import { ApolloProvider } from 'react-apollo';
 import { client } from '../graphql/apollo-client';
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => (
-  <ApolloProvider client={client}>
-    <AuthStateProvider>
-      <Router>{children}</Router>
-    </AuthStateProvider>
-  </ApolloProvider>
+  <Router>
+    <ApolloProvider client={client}>
+      <AuthStateProvider>{children}</AuthStateProvider>
+    </ApolloProvider>
+  </Router>
 );

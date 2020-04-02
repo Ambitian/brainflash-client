@@ -20,13 +20,13 @@ export const UserDropdown = () => {
     <div className="user-dropdown">
       <Dropdown
         overlay={menu}
-        placement="topCenter"
+        placement="bottomCenter"
         trigger={['click']}
         className="dropdown"
       >
         <Button className="user-dropdown__btn">
           Hello, Mikołaj
-          <Icon type="caret-up" />
+          <Icon type="caret-down" />
         </Button>
       </Dropdown>
     </div>

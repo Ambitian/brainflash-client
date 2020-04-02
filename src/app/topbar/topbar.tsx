@@ -1,9 +1,9 @@
 import React from 'react';
 import { SearchBar } from './search-bar/search-bar';
+import { NotificationBell } from './notification-bell/notification-bell';
+import { UserDropdown } from '../user-dropdown/user-dropdown';
 
 import './topbar.scss';
-import { CreateDeckButton } from './create-deck-button/create-deck-button';
-import { NotificationBell } from './notification-bell/notification-bell';
 
 export const Topbar = () => {
   return (
@@ -13,7 +13,7 @@ export const Topbar = () => {
       </div>
       <div className="panel-container">
         <NotificationBell />
-        <CreateDeckButton />
+        <UserDropdown />
       </div>
     </div>
   );

@@ -2,8 +2,11 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { UserDropdown } from './user-dropdown';
 import { Dropdown, Menu } from 'antd';
-import { AuthContext, authInitialState } from '../../context/auth/auth.context';
-import { logout } from '../../context/auth/auth.action-creators';
+import {
+  AuthContext,
+  authInitialState,
+} from '../../../context/auth/auth.context';
+import { logout } from '../../../context/auth/auth.action-creators';
 
 const wrapComponent = () => {
   return mount(<UserDropdown />);

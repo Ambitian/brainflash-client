@@ -2,8 +2,8 @@ import React from 'react';
 import { Dropdown, Menu, Button, Icon } from 'antd';
 
 import './user-dropdown.scss';
-import { useAuthState } from '../../hooks/use-auth-state/use-auth-state.hook';
-import { logout } from '../../context/auth/auth.action-creators';
+import { useAuthState } from '../../../hooks/use-auth-state/use-auth-state.hook';
+import { logout } from '../../../context/auth/auth.action-creators';
 
 export const UserDropdown = () => {
   const { dispatch } = useAuthState();

@@ -5,16 +5,19 @@ import { LoginContainer } from '../app/login/login-container';
 import { AuthorizedRoute } from './authorized-route';
 
 export enum AppRoute {
-  HOME = '/',
   LOGIN = '/login',
-  LOGOUT = '/logout',
+  DASHBOARD = '/',
+  DECK_LIST = '/explore-decks/:category',
+  YOUR_DECKS = '/your-decks',
+  PINNED_DECKS = '/pinned-decks',
+  DECK_CREATOR = '/deck-creator',
 }
 
 export const AppRoutes = () => {
   return (
     <Switch>
       <Route path={AppRoute.LOGIN} component={LoginContainer} />
-      <AuthorizedRoute path={AppRoute.HOME} component={Home} />
+      <AuthorizedRoute path={AppRoute.DASHBOARD} component={Home} />
     </Switch>
   );
 };

@@ -10,7 +10,7 @@ export const LoginContainer = () => {
   } = useAuthState();
 
   if (isAuthorized) {
-    return <Redirect to={AppRoute.HOME} />;
+    return <Redirect to={AppRoute.DASHBOARD} />;
   }
 
   return <Login />;

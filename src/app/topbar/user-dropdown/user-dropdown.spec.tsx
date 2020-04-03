@@ -8,13 +8,15 @@ import {
 } from '../../../context/auth/auth.context';
 import { logout } from '../../../context/auth/auth.action-creators';
 
-const wrapComponent = () => {
-  return mount(<UserDropdown />);
-};
-
 describe('<UserDropdown /> Component', () => {
   test('should render without crashing', () => {
-    const wrapper = wrapComponent();
+    const wrapper = mount(
+      <AuthContext.Provider
+        value={{ dispatch: jest.fn(), state: authInitialState }}
+      >
+        <UserDropdown />
+      </AuthContext.Provider>,
+    );
 
     expect(wrapper).toBeDefined();
     expect(wrapper).toHaveLength(1);
@@ -22,9 +24,9 @@ describe('<UserDropdown /> Component', () => {
 
   test('should invoke logout action', () => {
     const dispatch = jest.fn();
-    const state = authInitialState;
+
     const wrapper = mount(
-      <AuthContext.Provider value={{ dispatch, state }}>
+      <AuthContext.Provider value={{ dispatch, state: authInitialState }}>
         <UserDropdown />
       </AuthContext.Provider>,
     );

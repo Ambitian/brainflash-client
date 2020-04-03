@@ -5,6 +5,7 @@ import {
   SET_UNAUTHORIZED,
   SET_TOKENS,
   LOGOUT,
+  SET_USERNAME,
 } from './auth.reducer';
 
 export const startAuthorizing = (): AuthActionTypes => ({
@@ -26,6 +27,11 @@ export const setTokens = (
   type: SET_TOKENS,
   accessToken,
   refreshToken,
+});
+
+export const setUsername = (username: string): AuthActionTypes => ({
+  type: SET_USERNAME,
+  username,
 });
 
 export const logout = (): AuthActionTypes => ({

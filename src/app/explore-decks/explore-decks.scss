@@ -1,0 +1,13 @@
+.explore-decks {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  & .deck-list-container {
+    width: 430px;
+  }
+
+  & .deck-container {
+    flex: 1;
+  }
+}

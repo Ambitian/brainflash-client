@@ -1,0 +1,67 @@
+.deck-description-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 40px 40px;
+  overflow: scroll;
+  height: calc(100vh - 135px);
+
+  & .deck-img {
+    flex: 5;
+    width: 100%;
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  & .rating-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+    & .rating-summary {
+      font-weight: 700;
+      font-size: 23px;
+      margin: 0 15px;
+      color: #3d3b3c;
+    }
+
+    & .rating-count {
+      font-weight: 500;
+      font-size: 21px;
+      color: #b5b3b0;
+    }
+  }
+
+  & .deck-title {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 31px;
+    font-weight: 700;
+  }
+
+  & .deck-description {
+    padding: 0 20px;
+    overflow: hidden;
+  }
+
+  & .deck-details-link {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  & .deck-action-buttons {
+    flex: 1;
+    padding: 0 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .action-btn {
+      border-radius: 30px;
+      height: 50px;
+      padding: 0 40px;
+    }
+  }
+}

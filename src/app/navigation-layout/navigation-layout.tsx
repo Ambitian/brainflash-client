@@ -5,11 +5,11 @@ import { Switch } from 'react-router-dom';
 import { AuthorizedRoute } from '../../routing/authorized-route';
 import { AppRoute } from '../../routing/app-routes';
 import { Dashboard } from '../dashboard/dashboard';
-
-import './navigation-layout.scss';
-import { ExploreDecks } from '../explore-decks/explore-decks';
 import { YourDecks } from '../your-decks/your-decks';
 import { PinnedDecks } from '../pinned-decks/pinned-decks';
+import { ExploreDecksContainer } from '../explore-decks/explore-decks-container';
+
+import './navigation-layout.scss';
 
 export const NavigationLayout = () => {
   return (
@@ -31,7 +31,7 @@ export const NavigationLayout = () => {
             <AuthorizedRoute
               exact
               path={AppRoute.DECK_LIST}
-              component={ExploreDecks}
+              component={ExploreDecksContainer}
             />
             <AuthorizedRoute
               exact

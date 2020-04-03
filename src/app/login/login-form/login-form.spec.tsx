@@ -21,7 +21,8 @@ const mocks: MockedResponse[] = [
     result: {
       data: {
         login: {
-          jwt: '',
+          accessToken: '',
+          refreshToken: '',
         },
       },
     },

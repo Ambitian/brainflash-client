@@ -4,13 +4,23 @@ import { Dropdown, Menu, Button, Icon } from 'antd';
 import './user-dropdown.scss';
 import { useAuthState } from '../../../hooks/use-auth-state/use-auth-state.hook';
 import { logout } from '../../../context/auth/auth.action-creators';
+import { authStorage } from '../../../context/auth/auth.storage';
 
 export const UserDropdown = () => {
-  const { dispatch } = useAuthState();
+  const {
+    dispatch,
+    state: { username },
+  } = useAuthState();
+
+  const onLogout = () => {
+    dispatch(logout());
+    authStorage.setAccessToken(null);
+    authStorage.setRefreshToken(null);
+  };
 
   const menu = (
     <Menu>
-      <Menu.Item key="0" onClick={() => dispatch(logout())}>
+      <Menu.Item key="0" onClick={onLogout}>
         Logout
       </Menu.Item>
     </Menu>
@@ -25,7 +35,7 @@ export const UserDropdown = () => {
         className="dropdown"
       >
         <Button className="user-dropdown__btn">
-          Hello, Mikołaj
+          Hello, {username}
           <Icon type="caret-down" />
         </Button>
       </Dropdown>

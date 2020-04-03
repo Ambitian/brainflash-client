@@ -3,6 +3,7 @@ import { AppAction } from '../../types';
 export const SET_AUTHORIZED = 'auth/set-authorized';
 export const SET_UNAUTHORIZED = 'auth/set-unauthorized';
 export const SET_TOKENS = 'auth/set-tokens';
+export const SET_USERNAME = 'auth/set-username';
 export const START_AUTHORIZING = 'auth/start-authorizing';
 export const LOGOUT = 'auth/logout';
 
@@ -11,6 +12,7 @@ export type AuthActionTypes =
   | AppAction<typeof SET_UNAUTHORIZED>
   | AppAction<typeof START_AUTHORIZING>
   | AppAction<typeof SET_TOKENS, { accessToken: string; refreshToken: string }>
+  | AppAction<typeof SET_USERNAME, { username: string }>
   | AppAction<typeof LOGOUT>;
 
 export interface AuthState {
@@ -18,6 +20,7 @@ export interface AuthState {
   isAuthorizing: boolean;
   accessToken: string | null;
   refreshToken: string | null;
+  username: string;
 }
 
 export const authReducer = (
@@ -58,6 +61,13 @@ export const authReducer = (
       };
     }
 
+    case SET_USERNAME: {
+      return {
+        ...state,
+        username: action.username,
+      };
+    }
+
     case LOGOUT: {
       return {
         ...state,
@@ -65,6 +75,7 @@ export const authReducer = (
         refreshToken: null,
         isAuthorized: false,
         isAuthorizing: false,
+        username: '',
       };
     }
 

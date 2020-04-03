@@ -7,7 +7,10 @@ const isErrorResponse = (json: any): boolean => {
 };
 
 const isNotAuthenticated = (json: any) => {
-  return isErrorResponse(json) && json.errors[0].path.includes('login');
+  return (
+    isErrorResponse(json) &&
+    json.errors[0].extensions.exception.name === 'UnauthorizedError'
+  );
 };
 
 const prepareResponse = (text: string, json: any) => ({

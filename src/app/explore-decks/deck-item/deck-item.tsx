@@ -1,9 +1,9 @@
 import React from 'react';
-import { StarContainer } from '../../ui/star-container/star-container';
+import { StarContainer } from '../../../ui/star-container/star-container';
 
 import './deck-item.scss';
 
-interface DeckItemProps {
+export interface DeckItemProps {
   id: string;
   title: string;
   rating: number;

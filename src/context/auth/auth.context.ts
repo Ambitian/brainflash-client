@@ -9,7 +9,7 @@ export type AuthStateApi = {
 export const authInitialState: AuthState = {
   accessToken: null,
   refreshToken: null,
-  isAuthorized: false,
+  isAuthorized: true,
   isAuthorizing: false,
 };
 

@@ -5,7 +5,7 @@
   display: flex;
 
   & > .navigation-content {
-    width: 340px;
+    width: 320px;
     border-right: 1px solid #f4f7fa;
   }
 
@@ -16,6 +16,7 @@
 
     .content-container {
       flex: 1;
+      padding: 10px 40px 0 40px;
     }
   }
 }

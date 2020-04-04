@@ -11,6 +11,7 @@
     border-radius: 30px;
     background-position: center;
     background-size: cover;
+    background-color: rgba(95, 129, 244, 0.3);
   }
 
   & .rating-container {
@@ -48,6 +49,7 @@
   & .deck-details-link {
     font-size: 16px;
     padding: 0 20px;
+    margin: 5px 0;
   }
 
   & .deck-action-buttons {

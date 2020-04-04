@@ -22,10 +22,10 @@ export const DeckItem = ({
   imageUrl,
   selected = false,
 }: DeckItemProps) => {
-  const ratingSummary = React.useMemo(() => rating / ratingCount, [
-    rating,
-    ratingCount,
-  ]);
+  const ratingSummary = React.useMemo(
+    () => (Boolean(ratingCount) ? rating / ratingCount : 0),
+    [rating, ratingCount],
+  );
 
   const onClick = () => {
     if (onSelect) {

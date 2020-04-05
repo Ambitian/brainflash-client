@@ -12,13 +12,15 @@
     background-position: center;
     background-size: cover;
     background-color: rgba(95, 129, 244, 0.3);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
   }
 
   & .rating-container {
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px;
+    margin: 10px 0;
 
     & .rating-summary {
       font-weight: 700;
@@ -39,11 +41,13 @@
     padding: 0 20px;
     font-size: 31px;
     font-weight: 700;
+    margin: 0;
   }
 
   & .deck-description {
     padding: 0 20px;
     overflow: hidden;
+    font-size: 15px;
   }
 
   & .deck-details-link {

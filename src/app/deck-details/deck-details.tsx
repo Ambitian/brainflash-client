@@ -8,6 +8,7 @@ import { ReactComponent as CardSetImg } from '../../assets/images/deck.svg';
 import { ReactComponent as LanguageImg } from '../../assets/images/translate.svg';
 
 import './deck-details.scss';
+import { useRatingSummary } from '../../hooks/use-rating-summary/use-rating-summary.hook';
 
 interface DeckDetailsProps {
   title: string;
@@ -22,10 +23,7 @@ export const DeckDetails = ({
   rating,
   ratingCount,
 }: DeckDetailsProps) => {
-  const ratingSummary = React.useMemo(
-    () => (Boolean(ratingCount) ? rating / ratingCount : 0),
-    [rating, ratingCount],
-  );
+  const ratingSummary = useRatingSummary(rating, ratingCount);
 
   return (
     <div className="deck-details">

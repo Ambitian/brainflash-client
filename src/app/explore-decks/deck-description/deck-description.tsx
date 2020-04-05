@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 
 import './deck-description.scss';
 import { GetDeckData } from '../../../graphql/queries/get-deck.query';
+import { AppRoute } from '../../../routing/app-routes';
 
 export const DeckDescription = ({
+  id,
   title,
   description,
   rating,
@@ -42,7 +44,7 @@ export const DeckDescription = ({
         {text.slice(0, 50).join(' ').trimEnd()}
         {text.length > 101 ? '...' : ''}
       </div>
-      <Link className="deck-details-link" to="">
+      <Link className="deck-details-link" to={`${AppRoute.DECK_LIST}/${id}`}>
         View Details!
       </Link>
       <div className="deck-action-buttons">

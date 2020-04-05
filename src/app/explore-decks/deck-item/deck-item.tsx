@@ -2,6 +2,7 @@ import React from 'react';
 import { StarContainer } from '../../../ui/star-container/star-container';
 
 import './deck-item.scss';
+import { useRatingSummary } from '../../../hooks/use-rating-summary/use-rating-summary.hook';
 
 export interface DeckItemProps {
   id: string;
@@ -22,10 +23,7 @@ export const DeckItem = ({
   imageUrl,
   selected = false,
 }: DeckItemProps) => {
-  const ratingSummary = React.useMemo(
-    () => (Boolean(ratingCount) ? rating / ratingCount : 0),
-    [rating, ratingCount],
-  );
+  const ratingSummary = useRatingSummary(rating, ratingCount);
 
   const onClick = () => {
     if (onSelect) {

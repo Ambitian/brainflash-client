@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import './deck-description.scss';
 import { GetDeckData } from '../../../graphql/queries/get-deck.query';
 import { AppRoute } from '../../../routing/app-routes';
+import { useRatingSummary } from '../../../hooks/use-rating-summary/use-rating-summary.hook';
 
 export const DeckDescription = ({
   id,
@@ -14,10 +15,7 @@ export const DeckDescription = ({
   rating,
   ratingCount,
 }: GetDeckData) => {
-  const ratingSummary = React.useMemo(
-    () => (Boolean(ratingCount) ? rating / ratingCount : 0),
-    [rating, ratingCount],
-  );
+  const ratingSummary = useRatingSummary(rating, ratingCount);
 
   const text = React.useMemo(
     () => (description ? description.split(' ') : []),

@@ -8,6 +8,7 @@ import { Dashboard } from '../dashboard/dashboard';
 import { YourDecks } from '../your-decks/your-decks';
 import { PinnedDecks } from '../pinned-decks/pinned-decks';
 import { ExploreDecksContainer } from '../explore-decks/explore-decks-container';
+import { DeckDetailsContainer } from '../deck-details/deck-details-container';
 
 import './navigation-layout.scss';
 
@@ -32,6 +33,11 @@ export const NavigationLayout = () => {
               exact
               path={AppRoute.DECK_LIST}
               component={ExploreDecksContainer}
+            />
+            <AuthorizedRoute
+              exact
+              path={`${AppRoute.DECK_LIST}/:id`}
+              component={DeckDetailsContainer}
             />
             <AuthorizedRoute
               exact

@@ -8,6 +8,7 @@ export interface GetDeckDetailsData {
   description: string;
   category: string;
   cardCount: number;
+  imgUrl?: string;
 }
 
 export const GET_DECK_DETAILS_QUERY = gql`
@@ -19,6 +20,7 @@ export const GET_DECK_DETAILS_QUERY = gql`
       ratingCount
       description
       category
+      imgUrl
       cardCount
     }
   }

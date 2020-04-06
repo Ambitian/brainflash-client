@@ -14,6 +14,7 @@ export const DeckDescription = ({
   description,
   rating,
   ratingCount,
+  imgUrl,
 }: GetDeckData) => {
   const ratingSummary = useRatingSummary(rating, ratingCount);
 
@@ -27,7 +28,7 @@ export const DeckDescription = ({
       <div
         className="deck-img"
         style={{
-          backgroundImage: 'url(https://i.picsum.photos/id/667/1920/1080.jpg)',
+          backgroundImage: `url(${imgUrl})`,
         }}
       ></div>
       <div className="rating-container">

@@ -15,6 +15,7 @@ interface DeckDetailsProps {
   description: string;
   rating: number;
   ratingCount: number;
+  imgUrl: string;
 }
 
 export const DeckDetails = ({
@@ -22,6 +23,7 @@ export const DeckDetails = ({
   description,
   rating,
   ratingCount,
+  imgUrl,
 }: DeckDetailsProps) => {
   const ratingSummary = useRatingSummary(rating, ratingCount);
 
@@ -32,8 +34,7 @@ export const DeckDetails = ({
           <div
             className="deck-img"
             style={{
-              backgroundImage:
-                'url(https://i.picsum.photos/id/667/1920/1080.jpg)',
+              backgroundImage: `url(${imgUrl})`,
             }}
           ></div>
           <div className="deck-title-container">

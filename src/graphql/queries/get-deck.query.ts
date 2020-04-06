@@ -6,6 +6,7 @@ export interface GetDeckData {
   ratingCount: number;
   title: string;
   description: string;
+  imgUrl: string;
 }
 
 export const GET_DECK_QUERY = gql`
@@ -16,6 +17,7 @@ export const GET_DECK_QUERY = gql`
       ratingCount
       title
       description
+      imgUrl
     }
   }
 `;

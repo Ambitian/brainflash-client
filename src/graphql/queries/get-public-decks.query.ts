@@ -7,6 +7,7 @@ export const GET_PUBLIC_DECKS = gql`
       title
       rating
       ratingCount
+      imgUrl
     }
   }
 `;

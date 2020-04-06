@@ -10,7 +10,7 @@ export interface DeckItemProps {
   rating: number;
   ratingCount: number;
   onSelect?: (id: string) => void;
-  imageUrl?: string;
+  imgUrl?: string;
   selected?: boolean;
 }
 
@@ -20,7 +20,7 @@ export const DeckItem = ({
   rating,
   ratingCount,
   onSelect,
-  imageUrl,
+  imgUrl,
   selected = false,
 }: DeckItemProps) => {
   const ratingSummary = useRatingSummary(rating, ratingCount);
@@ -37,8 +37,11 @@ export const DeckItem = ({
       title={title}
       onClick={onClick}
     >
-      {imageUrl ? (
-        <img src={imageUrl} alt="Deck" className="img-container" />
+      {imgUrl ? (
+        <div
+          style={{ backgroundImage: `url(${imgUrl})` }}
+          className="img-container"
+        ></div>
       ) : (
         <div className="img-container"></div>
       )}

@@ -3,6 +3,7 @@ import React from 'react';
 import logoImg from '../../assets/images/logo.svg';
 
 import './deck-creator.scss';
+import { OptionItem } from './option-item/option-item';
 
 export const DeckCreator = () => {
   return (
@@ -20,35 +21,29 @@ export const DeckCreator = () => {
           <div className="information-container">
             <ul className="information-list">
               <li className="information-item">
-                <div className="info-number">1</div>
-                <div className="info-content">
-                  <h4 className="title">Configuring your deck.</h4>
-                  <p className="description">
-                    Name your deck and select category which describes your deck
-                    best.
-                  </p>
-                </div>
+                <OptionItem
+                  numberOrder={1}
+                  title="Configuring your deck."
+                  description="Name your deck and select category which describes your deck best."
+                  active
+                />
               </li>
 
               <li className="information-item">
-                <div className="info-number">2</div>
-                <div className="info-content">
-                  <h4 className="title">Describe the deck.</h4>
-                  <p className="description">
-                    Provide some words which will describe your deck.
-                  </p>
-                </div>
+                <OptionItem
+                  numberOrder={2}
+                  title="Describe the deck."
+                  description="Provide some words which will describe your deck."
+                />
               </li>
 
               <li className="information-item">
-                <div className="info-number">3</div>
-                <div className="info-content">
-                  <h4 className="title">Add an image.</h4>
-                  <p className="description">
-                    Image is no needed, and you can add it later, but image
-                    describes deck best.
-                  </p>
-                </div>
+                <OptionItem
+                  numberOrder={3}
+                  title="Add an image."
+                  description="Image is no needed, and you can add it later, but image
+              describes deck best."
+                />
               </li>
             </ul>
           </div>

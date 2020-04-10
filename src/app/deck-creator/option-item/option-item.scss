@@ -1,0 +1,50 @@
+.option-item {
+  display: flex;
+  align-items: center;
+
+  & > .item-number-order {
+    background-color: #ffffff;
+    border: 1px solid #b5b3b0;
+    min-width: 70px;
+    min-height: 70px;
+    max-width: 70px;
+    max-height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #b5b3b0;
+    border-radius: 50%;
+  }
+
+  & > .option-details {
+    margin-left: 20px;
+    color: #cccccc;
+
+    & > .option-title {
+      margin: 0;
+      font-size: 21px;
+      color: #cccccc;
+      font-weight: 700;
+    }
+
+    & > .option-description {
+      font-size: 17px;
+    }
+  }
+
+  &--active {
+    & > .item-number-order {
+      background-color: #3d3b3c;
+      color: #ffffff;
+    }
+
+    & > .option-details {
+      color: #ffffff;
+
+      & > .option-title {
+        color: #ffffff;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.option-list {
+  list-style: none;
+  padding: 40px 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & > .option-list-item {
+    & > .option-item {
+      position: relative;
+
+      & > .item-number-order {
+        position: absolute;
+        left: -40px;
+      }
+
+      & > .option-details {
+        margin-left: 40px;
+      }
+    }
+  }
+}
